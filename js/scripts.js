@@ -13,7 +13,7 @@ function submitForm(){
  
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
+        url: "php/process.php",
         data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
         success : function(text){
             if (text == "success"){
@@ -24,4 +24,5 @@ function submitForm(){
 }
 function formSuccess(){
     $( "#msgSubmit" ).removeClass( "hidden" );
+    $("#sendmessage").show();
 }
